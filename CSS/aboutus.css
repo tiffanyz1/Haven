@@ -1,4 +1,19 @@
 h1 {
-  font-size: 60px
-  font-family: 'Noticia Text', serif;
+  font-size: 40px
+  font-family:"Raleway", sans-serif;
 }
+
+body {
+  background-color: white
+}
+
+ .column {
+  float: left;
+  width: 25%;
+  flex: 25%;
+}
+
+img {
+  width:50%;
+}
+/* Clearfix (clear floats) */
