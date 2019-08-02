@@ -2,7 +2,7 @@
 
 <html lang="en-US">
 <head>
-  <link href='map.css' rel = "stylesheet">
+  <link href='finalweb.css' rel = "stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
  crossorigin=""/>
@@ -23,7 +23,6 @@
     pos = geolocation.getPosition();
     ourLoc = ol.proj.fromLonLat(pos);
   })
-
   //change setView so that it centers on our location
   var myMap = L.map('mapid').setView([39.954140, -75.173540], 13);
   var places = [["Current Location",39.954140,-75.173540],
