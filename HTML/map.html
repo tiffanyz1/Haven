@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <link href='map.css' rel = "stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+ crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+ crossorigin=""></script>
+	<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+  <title>Haven Map</title>
+</head>
+<body>
+  <div id="mapid"></div>
+  <script>
+  var geolocation = new ol.Geolocation();
+  geolocation.setTracking(true); // here the browser may ask for confirmation
+  geolocation.on('change:position', function() {
+    console.log(geolocation.getPosition());
+    pos = geolocation.getPosition();
+    ourLoc = ol.proj.fromLonLat(pos);
+  })
+
+  //change setView so that it centers on our location
+  var myMap = L.map('mapid').setView([39.954140, -75.173540], 13);
+  var places = [["Current Location",39.954140,-75.173540],
+              ["Wawa: 24-7", 39.951930, -75.159690],
+              ["Mcdonalds: 6am-11pm", 39.954720, -75.163630],
+              ["Starbucks: 5:30am-7:30pm exempt on weekends",39.953121,-75.172417],
+              ["Target: 7am-10pm ", 39.961350, -75.172070 ],
+              ["Dunkin Donuts: 4:30am - 10pm exempt sundays",39.953516,-75.175275]];
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 19,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiamVubmllY2hlbiIsImEiOiJjanl1M29rMDEwYXc5M2xtaHlkYXRvOHptIn0.cnsi-PcoSoSeZQCfVruSZg'
+  }).addTo(myMap);
+  for (var i = 0; i < places.length; i++) {
+    marker = new L.marker([places[i][1],places[i][2]])
+    .bindPopup(places[i][0])
+    .addTo(myMap);
+  }
+  </script>
+</body>
+
+
+</html>
