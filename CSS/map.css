@@ -2,3 +2,8 @@
   width: 650px;
   height: 650px
 }
+.column{
+  float: left;
+  width:20%;
+  flex: 20%;
+}
