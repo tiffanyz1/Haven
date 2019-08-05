@@ -1,9 +1,15 @@
 #mapid{
-  width: 650px;
-  height: 650px
+  width: 600px;
+  height: 600px
 }
 .column{
   float: left;
-  width:20%;
-  flex: 20%;
+  width: 50%;
+
+}
+
+#location{
+  height:500px;
+  width:500px;
+  ;
 }
