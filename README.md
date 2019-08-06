@@ -5,4 +5,4 @@ https://unpkg.com/leaflet@1.5.1/dist/leaflet.css, "https://unpkg.com/leaflet@1.5
 
 Created Login/Sign up page with a tutorial from W3Schools.com . 
 
-We do not claim ownership of any pictures another than the pictures of the Creators. 
+We do not claim ownership of any pictures other than the pictures of the Creators. 
