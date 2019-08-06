@@ -9,3 +9,9 @@ https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiyvvCu8u7jAhXqmeAKHcSGBBEQPAg
 https://stackoverflow.com/ was also very helpful in finding errors and bugs 
 
 We do not claim ownership of any pictures other than the pictures of the Creators. 
+
+Videos used in the self-defense page:
+https://www.youtube.com/watch?v=ooeAzo2oVJU
+https://www.youtube.com/watch?v=CKaa19kpqzM
+
+
