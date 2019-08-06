@@ -9,7 +9,7 @@ function signin(){
  if (email !== infoE && password !== infoP) {
    alert("Account Not Found")
  } else {
-   window.location.href = 'file:///C:/Users/Leila%20F/Documents/Haven/HTML/profile.html'
+   window.location.href = '/profile.html'
 
  }
 
